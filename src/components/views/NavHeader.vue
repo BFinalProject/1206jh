@@ -13,10 +13,10 @@
                   <a href="/" title="Home">홈</a>
                 </li>
                 <li class="active">
-                  <a href="#intro">소개</a>
+                  <a href="/#intro">소개</a>
                 </li>
                 <li class="active">
-                  <a href="#use">이용방법</a>
+                  <a href="/#use">이용방법</a>
                 </li>
                 <li class="has-sub">
                   <a href="/board" title="board">게시판&nbsp;</a>

@@ -90,7 +90,12 @@
 
           <span>체크한 이름: {{ signup_gender }}</span>
 
-          <button type="button" class="button1" @click="usersignup()">
+          <button
+            type="button"
+            class="button1"
+            @click="usersignup()"
+            onclick="location.href='/login'"
+          >
             회원가입하기
           </button>
         </form>
@@ -109,7 +114,7 @@
               type="button"
               class="button1"
               style="margin-bottom: 10px"
-              onclick="location.href='#'"
+              onclick="location.href='main2'"
               @click="userlogin()"
             >
               로그인

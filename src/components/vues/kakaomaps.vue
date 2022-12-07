@@ -38,6 +38,7 @@
             class="btn-close"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
+            style="margin-right: 1rem;"
           ></button>
         </div>
         <div class="offcanvas-header" display="flex">
@@ -312,13 +313,19 @@
             <span>체크한 이름: {{ checkedemotion }}</span>
           </div>
         </div>
-        <div style="margin-top: 30px;">
+        <div style="margin-top: 20px;">
           <button
             style="background-color:#113f89; border-radius: 5px; color: #ffc303; width: 100px; height: 50px; border-color: #113f89;"
             @click="Overlaydata()"
           >
             선택완료
           </button>
+        </div>
+        <div>
+          <img
+            src="../../mainboard/images/map2.jpg"
+            style="width:100%; position:absolute; bottom: 0; left: 0;"
+          />
         </div>
       </div>
     </div>
@@ -345,26 +352,40 @@
         id="offcanvasScrolling"
         aria-labelledby="offcanvasScrollingLabel"
       >
-        <div class="offcanvas-header" display="flex" text-align="center">
-          <h4 class="offcanvas-title" id="offcanvasScrollingLabel">
-            추천장소를 확인해 주세요!
-          </h4>
-
+        <div
+          class="offcanvas-header"
+          display="flex"
+          text-align="center"
+          style="background-color: #113f89;"
+        >
+          <img
+            src="../../mainboard/images/logo2.png"
+            style="cursor: pointer;"
+            onclick="location.href='/'"
+          />
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
+            style="margin-right: 1rem;"
           ></button>
         </div>
+        <div class="offcanvas-header" display="flex" text-align="center">
+          <h4 class="offcanvas-title" id="offcanvasScrollingLabel">
+            아래의 추천장소를 확인해 주세요!
+          </h4>
+        </div>
         <!-- 1 -->
-        <div>
+        <div
+          style="border-bottom: solid 5px #f56a6a; border-top: solid 5px #f56a6a"
+        >
           <div class="row">
             <div class="col-md-12">
               <div id="accordion" class="checkout">
                 <div
                   class="panel checkout-step"
-                  style="cursor:move;"
+                  style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom:0;"
                   draggable="true"
                 >
                   <div>
@@ -376,17 +397,17 @@
                         data-parent="#accordion"
                         href="#collapseOne"
                       >
-                        Phone Number Verification</a
+                        식당 므삐동</a
                       >
                     </h4>
                   </div>
                   <div id="collapseOne" class="collapse in"></div>
                 </div>
-                <div class="panel checkout-step">
+                <div class="panel" style="margin-bottom: 0;">
                   <div
                     role="tab"
                     id="headingTwo"
-                    style="cursor:move;"
+                    style="cursor:move; border-bottom: 1px solid lightslategrey;"
                     draggable="true"
                   >
                     <span class="checkout-step-number">2</span>
@@ -398,151 +419,16 @@
                         data-parent="#accordion"
                         href="#collapseTwo"
                       >
-                        Delivery Address
+                        카페 율곡-
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseTwo" class="panel-collapse collapse">
-                    <div class="checkout-step-body">
-                      <div class="checout-address-step">
-                        <div class="row">
-                          <form class="">
-                            <!-- Multiple Radios (inline) -->
-                            <div class="form-group">
-                              <label
-                                class="col-md-12 control-label"
-                                for="address"
-                              ></label>
-                              <div class="col-md-12 ">
-                                <label class="radio-inline" for="address-0">
-                                  <input
-                                    type="radio"
-                                    name="address"
-                                    id="address-0"
-                                    value="Home"
-                                    checked="checked"
-                                  />
-                                  Home
-                                </label>
-                                <label class="radio-inline" for="address-1">
-                                  <input
-                                    type="radio"
-                                    name="address"
-                                    id="address-1"
-                                    value="Office"
-                                  />
-                                  Office
-                                </label>
-                                <label class="radio-inline" for="address-2">
-                                  <input
-                                    type="radio"
-                                    name="address"
-                                    id="address-2"
-                                    value="Other"
-                                  />
-                                  Other
-                                </label>
-                              </div>
-                            </div>
-                            <!-- Text input-->
-                            <div class="form-group">
-                              <div class="col-md-12">
-                                <label class="control-label" for="name"
-                                  >Name</label
-                                >
-                                <input
-                                  id="name"
-                                  name="name"
-                                  type="text"
-                                  placeholder="Name"
-                                  class="form-control input-md"
-                                  required=""
-                                />
-                              </div>
-                            </div>
-                            <!-- Text input-->
-                            <div class="form-group">
-                              <label class="col-md-12 control-label" for="flat"
-                                >Flat / House / Office No.</label
-                              >
-                              <div class="col-md-12">
-                                <input
-                                  id="flat"
-                                  name="flat"
-                                  type="text"
-                                  placeholder="address"
-                                  class="form-control input-md"
-                                  required=""
-                                />
-                              </div>
-                            </div>
-                            <!-- Text input-->
-                            <div class="form-group">
-                              <label
-                                class="col-md-12 control-label"
-                                for="street"
-                                >Street / Society / Office Name</label
-                              >
-                              <div class="col-md-12">
-                                <input
-                                  id="street"
-                                  name="street"
-                                  type="text"
-                                  placeholder="Street Address"
-                                  class="form-control input-md"
-                                />
-                              </div>
-                            </div>
-                            <!-- Text input-->
-                            <div class="form-group">
-                              <label
-                                class="col-md-12 control-label"
-                                for="Locality"
-                                >Locality</label
-                              >
-                              <div class="col-md-12">
-                                <input
-                                  id="Locality"
-                                  name="Locality"
-                                  type="text"
-                                  placeholder="Ahmedabad"
-                                  class="form-control input-md"
-                                  required=""
-                                />
-                              </div>
-                            </div>
-                            <!-- Button -->
-                            <div class="form-group">
-                              <div class="col-md-12">
-                                <button
-                                  id="singlebutton"
-                                  name="singlebutton"
-                                  class="btn btn-primary"
-                                >
-                                  Save
-                                </button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <a
-                        class="collapsed btn btn-default"
-                        role="button"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseThree"
-                      >
-                        Next
-                      </a>
-                    </div>
-                  </div>
                 </div>
-                <div class="panel checkout-step">
+                <div class="panel" style="margin-bottom: 0;">
                   <div
                     role="tab"
                     id="headingThree"
-                    style="cursor:move;"
+                    style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom: 0;"
                     draggable="true"
                   >
                     <span class="checkout-step-number">3</span>
@@ -554,117 +440,70 @@
                         data-parent="#accordion"
                         href="#collapseThree"
                       >
-                        Time & Date
+                        공연 플렉스라운지
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="checkout-step-body">
-                      <div class="row">
-                        <div class="form-group">
-                          <label class="col-md-12 control-label" for="time"
-                            >Time</label
-                          >
-                          <div class="col-md-12">
-                            <div class="radio">
-                              <label for="time-0">
-                                <input
-                                  type="radio"
-                                  name="time"
-                                  id="time-0"
-                                  value="8:00 - 9:00"
-                                  checked="checked"
-                                />
-                                8:00 - 9:00
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label for="time-1">
-                                <input
-                                  type="radio"
-                                  name="time"
-                                  id="time-1"
-                                  value="10:00 - 11:00"
-                                />
-                                10:00 - 11:00
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label for="time-2">
-                                <input
-                                  type="radio"
-                                  name="time"
-                                  id="time-2"
-                                  value="12:00 - 1:00"
-                                />
-                                12:00 - 1:00
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label for="time-3">
-                                <input
-                                  type="radio"
-                                  name="time"
-                                  id="time-3"
-                                  value="1:00 - 2:00"
-                                />
-                                1:00 - 2:00
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <a
-                        class="collapsed btn btn-default"
-                        role="button"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseFour"
-                      >
-                        Next
-                      </a>
-                    </div>
-                  </div>
                 </div>
-                <div class="panel checkout-step">
+                <div class="panel" style="margin-bottom: 0;">
                   <div
                     role="tab"
-                    id="headingFour"
-                    style="cursor:move;"
+                    id="headingThree"
+                    style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom: 0;"
                     draggable="true"
                   >
-                    <span class="checkout-step-number">4</span>
+                    <span class="checkout-step-number">3</span>
                     <h4 class="checkout-step-title">
                       <a
                         class="collapsed"
                         role="button"
                         data-toggle="collapse"
                         data-parent="#accordion"
-                        href="#collapseFour"
+                        href="#collapseThree"
                       >
-                        Payment
+                        볼더프렌즈 클라이밍
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseFour" class="panel-collapse collapse">
-                    <div class="checkout-step-body">
-                      Payment Mode
-                      <a href="#" class="btn btn-default"
-                        >Proccess to payment</a
+                </div>
+                <div class="panel" style="margin-bottom: 0;">
+                  <div
+                    role="tab"
+                    id="headingThree"
+                    style="cursor:move; border-bottom: 1px solid lightslategrey; margin-bottom: 0;"
+                    draggable="true"
+                  >
+                    <span class="checkout-step-number">3</span>
+                    <h4 class="checkout-step-title">
+                      <a
+                        class="collapsed"
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion"
+                        href="#collapseThree"
                       >
-                    </div>
+                        공연 플렉스라운지
+                      </a>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        Credit by
-        <a href="http://jituchauhan.com/" target="_blank"> jitu chauhan</a>
-        <div style="margin-top: 50px;">
-          <button @click="hideMarkers3()">마커 선택</button>
-          <button @click="hideMarkers()">마커 삭제</button>
-          <button @click="hideMarkers2()">마커 삭제2</button>
+        <div style="margin-top: 10px;">
+          <button
+            style="background-color:#113f89; border-radius: 5px; color: #ffc303; width: 100px; height: 50px; border-color: #113f89;"
+            @click="hideMarkers3()"
+          >
+            다시 선택
+          </button>
+          <div>
+            <img
+              src="../../mainboard/images/map3.jpg"
+              style="width:100%; position:absolute; bottom: 0; left: 0;"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -705,8 +544,8 @@ export default {
     let mapContainer = document.getElementById("map");
     vm.mapOption = {
       //지도를 생성할 때 필요한 기본 옵션
-      center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-      level: 5 //지도의 레벨(확대, 축소 정도)
+      center: new kakao.maps.LatLng(33.450701, 126.570667) //지도의 중심좌표.
+      //level: 7 //지도의 레벨(확대, 축소 정도)
     };
     vm.map = new kakao.maps.Map(mapContainer, vm.mapOption);
 
@@ -737,7 +576,9 @@ export default {
       let data = [
         { x: 37.482802136930516, y: 126.79564879005665 },
         { x: 37.483987091628535, y: 126.7830868366494 },
-        { x: 37.46851044224279, y: 126.797275939562 }
+        { x: 37.46851044224279, y: 126.797275939562 },
+        { x: 37.47051044224279, y: 126.787275939562 },
+        { x: 37.47551044224279, y: 126.784275939562 }
       ];
       (vm.datas = []), (vm.markeris = data);
       console.log(vm.markeris);
@@ -771,6 +612,7 @@ export default {
         });
 
         let mapmovedata = bounds.extend(vm.markerPosition);
+
         // 마커가 지도 위에 표시되도록 설정합니다
         //this.clusteredr.clear(marker);
         //marker.setMap(null);image.png
@@ -825,39 +667,6 @@ export default {
     //         vm.map.setMap(vm.markers[i]);
     //     }
     // }
-    hideMarkers: function() {
-      let vm = this;
-      vm.markeris.clear = function() {
-        if (vm.markeris.length > 0) {
-          for (let i = 0; i < vm.markeris.length; i++) {
-            vm.markerPosition[i].setMap(null);
-          }
-        }
-      };
-      vm.markeris.clear = function() {
-        if (vm.markeris) vm.markeris.clear(vm.map);
-
-        console.log(vm.marker.position);
-        console.log(vm.markerPosition);
-        // console.log(vm.markerPosition);
-        // let getmarker;
-        // for(let i=0; i < vm.marker.length; i++){
-        //     getmarker = vm.marker[i],
-        //     getmarker = null
-        //     console.log(getmarker);
-        // }
-
-        // console.log(vm.marker)
-        // vm.marker.setMap(vm.map);
-        // marker.setMap(vm.map);
-      };
-    },
-    hideMarkers2: function() {
-      vm.markeris = document.document.getElementById("gs");
-      console.log($("gs"));
-      let vm = this;
-      $("gs").remove();
-    },
     hideMarkers3: function() {
       let vm = this;
       console.log(vm.onclick);
@@ -964,12 +773,12 @@ button {
 
 a {
   font-family: "Do Hyeon", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h4 {
   font-family: "Do Hyeon", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 button {
